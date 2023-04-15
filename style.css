@@ -191,60 +191,6 @@ body,
 }
 
 
-
-/*===================
-/*.video__controls{*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.left{*/
-/*    display: flex;*/
-/*    align-items: c;*/
-/*    padding-left:40px*/
-/*}*/
-
-/*.right + .right{*/
-/*    margin-left: 40px;*/
-/*}*/
-
-/*.right{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    margin-right: 40px;*/
-/*}*/
-
-/*.options{*/
-/*    max-width: 150px;*/
-/*}*/
-
-/*.options volume{*/
-/*    margin-right: 20px;*/
-/*}*/
-
-/*.left{*/
-/*    margin-left: 20px;*/
-/*    padding-left: 20px;*/
-/*}*/
-
-/*.wrapper{*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*}*/
-
-/*.wrapper::before{*/
-/*    content:'';*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*    z-index: -1;*/
-/*    position: absolute;*/
-/*    height: calc(100%+35px);*/
-
-/*}*/
 .container video{
     width: 100%;
 }
