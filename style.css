@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    min-height: 100vh;
+    background: white;
+}
+button{
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}
+
+body,
+.video__controls,
+.video__timer,
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*button{*/
+/*   */
+
+/*}*/
+
+.control__btn + .control__btn{
+    margin-left: 40px;
+}
+
+.container{
+    width: 98%;
+    max-width: 1440px;
+    position: relative;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    user-select: none; /*ADDED IF WILL BE BUGS - DELETE IT */
+}
+.fullscreen{
+    min-width: 100%;
+    height: 100%;
+
+}
+
+.wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:-100px;
+    opacity: 0;
+    min-height: 100px;
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.08s ease;
+
+}
+
+.container.show__controls .wrapper{
+    bottom: 0px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.15s ease;
+
+}
+
+.container video{
+    width: 100%;
+}
+
+
+.wrapper::before{ /*Делаем черный контейнер внизу*/
+    content: '';
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: calc(100% + 0px);
+    /*background: #090909; -> удаляеми нижний бг*/
+
+
+}
+
+.video__controls .options{
+    width: 100%;
+}
+
+.video__timeline {
+    height: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+.progress__area{
+    height: 8px;
+    background: #C4C4C4;
+    position: relative;
+}
+
+.progress__bar{
+    width: 0;
+    height: 8px;
+    position: relative;
+    background: #24809E;
+}
+
+.progress__area span{
+    position: absolute;
+    left: 50%;
+    top:-25px;
+    font-size: 17px;
+    transform: translateX(-50%);
+    color:#FFFFFF;
+}
+
+.progress__bar::before{
+    content:'';
+    right: 0;
+    top: 50%;
+    height: 15px;
+    width: 15px;
+    background: inherit;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.progress__area span,
+.progress__bar::before{
+    display: none;
+}
+
+.video__timeline:hover .progress__area span,
+.video__timeline:hover .progress__bar::before{
+    display: block;
+}
+
+
+.progress__area span{
+    position: absolute;
+}
+
+.options button{
+    cursor: pointer;
+    border:none;
+    background-color:inherit;
+}
+
+.video__controls .options:first-child{
+    padding-left: 40px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.video__controls .options:last-child{
+    padding-right: 40px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.options input{
+   height: 8px;
+   max-width: 144px;
+}
+
+.options .video__timer {
+    font-size: 20px;
+    color: #ffff;
+    margin-left: 20px;
+}
+
+.right__item + .right__item{
+    margin-left: 20px;
+
+}
+
+
+.separator{
+    font-size: 18px;
+    margin: 0 5px;
+
+}
+
+
+
+/*===================
+/*.video__controls{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.left{*/
+/*    display: flex;*/
+/*    align-items: c;*/
+/*    padding-left:40px*/
+/*}*/
+
+/*.right + .right{*/
+/*    margin-left: 40px;*/
+/*}*/
+
+/*.right{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-right: 40px;*/
+/*}*/
+
+/*.options{*/
+/*    max-width: 150px;*/
+/*}*/
+
+/*.options volume{*/
+/*    margin-right: 20px;*/
+/*}*/
+
+/*.left{*/
+/*    margin-left: 20px;*/
+/*    padding-left: 20px;*/
+/*}*/
+
+/*.wrapper{*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*}*/
+
+/*.wrapper::before{*/
+/*    content:'';*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    z-index: -1;*/
+/*    position: absolute;*/
+/*    height: calc(100%+35px);*/
+
+/*}*/
+.container video{
+    width: 100%;
+}
+
