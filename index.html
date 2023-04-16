@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class = 'container show__controls'>
@@ -18,14 +18,14 @@
         <ul class="video__controls">
             <li class="options left">
                 <button class="skip__backward control__btn">
-                    <img src = 'left_arrow.png' alt = 'skip-backward'>
+                    <img src = 'img/left_arrow.png' alt = 'skip-backward'>
                 </button>
                 <button class="play control__btn">
-                    <img src = 'play_mini.png' class = 'playPause__img' alt = 'play'>
+                    <img src = 'img/play_mini.png' class = 'playPause__img' alt = 'play'>
                 </button>
 
                 <button class="skip__forward control__btn">
-                    <img src = 'right_arrow.png' alt = 'skip-forward'>
+                    <img src = 'img/right_arrow.png' alt = 'skip-forward'>
                 </button>
                 <div class="video__timer">
                     <p class="current__time">00:00</p>
@@ -36,18 +36,18 @@
 
             <li class="options right">
                <button class="volume right__item">
-                   <img src="volume.png" class = 'volume__img' alt = 'volume'>
+                   <img src="img/volume.png" class = 'volume__img' alt = 'volume'>
                </button>
                 <input type="range" name="range" id="range" class="right__item" min = 0 max = 1 step = any>
                 <button class="expand__window right__item">
-                    <img src="expand.png" alt="expand" >
+                    <img src="img/expand.png" alt="expand" >
                 </button>
             </li>
         </ul>
         </div>
 
-        <video src="video.mp4"  ></video>
+        <video src="video/video.mp4"  ></video>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

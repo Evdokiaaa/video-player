@@ -72,23 +72,23 @@ container.addEventListener('mouseup',()=>{
 })
 
 videoTimeline.addEventListener('mousemove',e=>{
-    const progresstime = videoTimeline.querySelector('span')
+    const progressTime = videoTimeline.querySelector('span')
     let offsetx = e.offsetX;
-    progresstime.style.left = `${offsetx}px`
+    progressTime.style.left = `${offsetx}px`
     let timelineWidth = videoTimeline.clientWidth;
     let percent = (e.offsetX / timelineWidth) * video.duration
-    progresstime.innerText=formatTime(percent)
+    progressTime.innerText=formatTime(percent)
 
 })
 
 volumeBtn.addEventListener('click',function (){
     if(volumeBtn.childNodes.item(1).src.endsWith('volume.png')) { // src = ... - перезапись
         video.volume=0.0;
-        volumeBtn.childNodes.item(1).src = 'volume_off.png';
+        volumeBtn.childNodes.item(1).src = 'img/volume_off.png';
         // volume.childNodes.item(1).src = 'volume_off.png'
 
     } else{
-        volumeBtn.childNodes.item(1).src = 'volume.png';
+        volumeBtn.childNodes.item(1).src = 'img/volume.png';
         video.volume=0.5;
     }
     volumeSlider.value = video.volume
@@ -99,10 +99,10 @@ volumeBtn.addEventListener('click',function (){
 volumeSlider.addEventListener('input',function(event){
     video.volume = event.target.value
     if(video.volume==0){
-        volumeBtn.childNodes.item(1).src = 'volume_off.png';
+        volumeBtn.childNodes.item(1).src = 'img/volume_off.png';
 
     } else{
-        volumeBtn.childNodes.item(1).src = 'volume.png';
+        volumeBtn.childNodes.item(1).src = 'img/volume.png';
     }
 
 })
@@ -149,12 +149,12 @@ window.addEventListener('keyup',function(event){
 })
 video.addEventListener('play',()=>{ // if played - change play btn to stop
 
-    playPause_btn.childNodes.item(1).src = 'pause.png'
+    playPause_btn.childNodes.item(1).src = 'img/pause.png'
 
 })
 
 video.addEventListener('pause',()=>{ //if stopped - change btn to play
-    playPause_btn.childNodes.item(1).src ='play_mini.png'
+    playPause_btn.childNodes.item(1).src ='img/play_mini.png'
 
 
 })
@@ -180,4 +180,3 @@ function formatTime(currentTime){
 
 }
 
-//ФИКСАНУТЬ VOLUME OFF -> поменять на белую
